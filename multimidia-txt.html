@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <title>Multimídia</title>
+    <script src="./javascript/funcoes.js"></script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            
+            <img id="icone" src="./imagens/multimidia.png">
+            <nav id="menu">   
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudaFoto('./imagens/home.png')" onmouseout="mudaFoto('./imagens/multimidia.png')"><a href="./index-txt.html">Home</a></li>
+                    <li onmouseover="mudaFoto('./imagens/especificacoes.png')" onmouseout="mudaFoto('./imagens/multimidia.png')"><a href="./specs-txt.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('./imagens/fotos.png')" onmouseout="mudaFoto('./imagens/multimidia.png')"><a href="./fotos-txt.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('./imagens/multimidia.png')" onmouseout="mudaFoto('./imagens/multimidia.png')"><a href="./multimidia-txt.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('./imagens/contato.png')" onmouseout="mudaFoto('./imagens/multimidia.png')"><a href="./fale-conosco-txt.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-prin">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Glass > Multimídia</h3>
+                        <h1>Sons e Vídeos</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="areda">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+                <div id="tv-radio">
+                    <audio id="musica" controls="controls">
+                        <source src="./media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg" />    
+                    </audio>
+                    <video id="filme" controls="controls" poster="./imagens/video-mini03.jpg">
+                        <source src="./media/getting-started.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara <br>
+            <a href="https://www.facebook.com/tatiane.cinair.5/" target="_blank">Facebook</a>  | 
+            <a href="https://twitter.com/tatiane2362" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

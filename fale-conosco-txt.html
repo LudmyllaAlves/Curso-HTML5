@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>Fale conosco</title>
+    <script src="./javascript/funcoes.js"></script>
+    
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            
+            <img id="icone" src="./imagens/contato.png">
+            <nav id="menu">   
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudaFoto('./imagens/home.png')" onmouseout="mudaFoto('./imagens/contato.png')"><a href="./index-txt.html">Home</a></li>
+                    <li onmouseover="mudaFoto('./imagens/especificacoes.png')" onmouseout="mudaFoto('./imagens/contato.png')"><a href="./specs-txt.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('./imagens/fotos.png')" onmouseout="mudaFoto('./imagens/contato.png')"><a href="./fotos-txt.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('./imagens/multimidia.png')" onmouseout="mudaFoto('./imagens/contato.png')"><a href="./multimidia-txt.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('./imagens/contato.png')" onmouseout="mudaFoto('./imagens/contato.png')"><a href="./fale-conosco-txt.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-prin">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Glass > Fotos</h3>
+                        <h1>Galeria de Imagens do Google Glass</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="areda">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+                <form method="post" oninput="calTotal()">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="cnome">Nome: </label> <input type="text" name="tnome" id="cnome" maxlength="30" size="20" placeholder="Nome completo:"></p>
+                        <p><label for="csenha">Senha: </label> <input type="password" name="tsenha" id="csenha" maxlength="10" size="10" placeholder="10 digitos:"></p>
+                        <p><label for="cemail">E-mail: </label> <input type="email" name="temail" id="cemail" maxlength="30" size="20" placeholder="@mail"></p>
+                        <fieldset>
+                            <legend>Sexo:</legend>
+                            <input type="radio" name="tsexo" id="cmasc"><label for="cmasc">Masculino</label> <br>
+                            <input type="radio" name="tsexo" id="cfem"><label for="cfem">Feminino</label>
+                        </fieldset>
+                        <p>Data de Nascimento: <input type="date" name="tdata" id="cdata"></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="crua">Logradouro:</label> <input type="text" name="trua" id="crua" placeholder=" rua, av, trav" maxlength="40" size="20">  </p>
+                        <p><label for="cnum">Número:</label> <input type="number" name="tnum" id="cnum" min="0" max="99999" placeholder="12345"></p>
+                        <p>Estado: <label for="cestado"></label> 
+                            <select name="testado" id="cestado">
+                                <option value="RJ">Rio de janeiro</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="GO">Goias</option>
+                                <option value="MT">Mato Grosso</option>
+                            </select> </p>
+                        <p><label for="ccidade">Cidade:</label> <input type="text" name="tcidade" id="ccidade" maxlength="30" size="20" placeholder="cidade" list="cidades"> </p>
+                        <datalist id="cidades">
+                            <option value="Rio de janeiro">Rio de janeiro</option>
+                            <option value="Nova iguaçu">Nova iguaçu</option>
+                            <option value="Niteroi">Niteroi</option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        <p><label for="cgrau">Grau de Urgência:</label>Min <input type="range" name="tgrau" id="cgrau" min="0" max="5">Max</p>
+                        <p><label for="cmen">Mensagem:</label><textarea name="tmen" id="cmen" placeholder="mensagem" cols="45" rows="5"></textarea></p>
+                        
+                    </fieldset>
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox"name="tadq" id="cadq" checked>
+                            <label for="cadq">Gostaria de adquirir um Google Glass quando disponível</label>
+                        </p>
+                        <p><label for="ccor">Cor:</label><input type="color" name="tcor" id="ccor" value="#000000"></p>
+                        <p><label for="cquant">Quantidade:</label> <input type="text" name="tquant" id="cquant" min="0" max="5" value="0"></p>
+                        <p><label for="cpreco">Preço Total: R$</label> <input type="float" name="tpreco" id="cpreco" readonly></p>
+                    </fieldset>
+                    <button name="tenviar">ENVIAR</button>
+
+
+                </form>
+            </article>
+        </section>
+        
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara <br>
+            <a href="https://www.facebook.com/tatiane.cinair.5/" target="_blank">Facebook</a>  | 
+            <a href="https://twitter.com/tatiane2362" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
